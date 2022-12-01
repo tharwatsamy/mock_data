@@ -1,9 +1,14 @@
 {
-    "data" :[
-        {
-            "title" : "Live Music Montant",
-             "Date" : "Friday june 27 07:90 m",
-                "image" :"https://cimg.visitscotland.com/cms-images/header-images/EventsHeader?size=lg"
-        }
-    ]
-}
+    "Post": {
+      "title": { "string": {} },
+      "comments": {
+        "hasMany": "Comment"
+      }
+    },
+    "Comment": {
+      "body": { "string": {} },
+      "post": {
+        "belongsTo": "Post"
+      }
+    }
+  }
